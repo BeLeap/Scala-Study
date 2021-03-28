@@ -19,10 +19,10 @@ object Main {
   /**
    * Exercise 2
    */
-  def balance(chars: List[Char]): Boolean = { /* TODO */ }
+  def balance(chars: List[Char]): Boolean = { true }
 
   /**
    * Exercise 3
    */
-  def countChange(money: Int, coins: List[Int]): Int = { /* TODO  */ }
+  def countChange(money: Int, coins: List[Int]): Int = { 0 }
 }
