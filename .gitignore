@@ -1,0 +1,42 @@
+# Created by https://www.toptal.com/developers/gitignore/api/scala,vscode,vim
+# Edit at https://www.toptal.com/developers/gitignore?templates=scala,vscode,vim
+
+### Scala ###
+*.class
+*.log
+
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+
+### vscode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# End of https://www.toptal.com/developers/gitignore/api/scala,vscode,vim
+
+**/target/
+**/lib/
+**/lib_managed/
+**/cache/
