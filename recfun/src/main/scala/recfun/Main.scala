@@ -2,11 +2,13 @@ package recfun
 import common._
 
 object Main {
-  def main(args: Array[String]) {
+  def main(args: Array[String]): Unit = {
     println("Pascal's Triangle")
     for (row <- 0 to 10) {
-      for (col <- 0 to row)
-        print(pascal(col, row) + " ")
+      for (col <- 0 to row) {
+        val result = pascal(col, row)
+        print(s"$result ")
+      }
       println()
     }
   }
@@ -19,7 +21,26 @@ object Main {
   /**
    * Exercise 2
    */
-  def balance(chars: List[Char]): Boolean = { true }
+  def innerBalance(chars: List[Char], openedCount: Int): Boolean = {
+    chars match {
+      case ('('::cs) => innerBalance(cs, openedCount + 1)
+      case (')'::cs) => {
+        if (openedCount - 1 >= 0) {
+          innerBalance(cs, openedCount - 1)
+        } else {
+          false
+        }
+      }
+      case (_::cs) => innerBalance(cs, openedCount)
+      case List() => {
+        openedCount match {
+          case 0 => true
+          case _ => false
+        }
+      }
+    }
+  }
+  def balance(chars: List[Char]): Boolean = innerBalance(chars, 0)
 
   /**
    * Exercise 3
